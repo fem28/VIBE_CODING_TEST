@@ -19,13 +19,14 @@ Express.js 4, mssql, dotenv 기반의 Stored Procedure 호출 예제입니다.
 ├── public/
 │   ├── css/styles.css
 │   └── js/app.js
+├── FORM/
+│   └── TEST01.html
 ├── routes/
 │   ├── api.js
 │   └── index.js
 ├── scripts/
 │   └── healthcheck.js
-├── views/
-│   └── index.html
+├── index.html
 ├── .env.example
 ├── package.json
 └── server.js

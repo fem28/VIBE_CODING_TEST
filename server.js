@@ -11,12 +11,14 @@ var errorHandler = require('./middleware/errorHandler');
 var app = express();
 var port = normalizePort(process.env.PORT || '3000');
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'FORM'));
 app.set('view engine', 'html');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/FORM', express.static(path.join(__dirname, 'FORM')));
 app.use('/vendor/jquery', express.static(path.join(__dirname, 'node_modules', 'jquery', 'dist')));
 
 app.use('/', indexRouter);
