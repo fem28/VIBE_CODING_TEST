@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Express MSSQL Stored Procedure App</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Node.js · Express · MSSQL</p>
+        <h1>Stored Procedure API Console</h1>
+      </div>
+      <div class="status-pill" id="serverStatus">확인 중</div>
+    </header>
+
+    <main class="content-grid">
+      <section class="panel form-panel" aria-labelledby="createTitle">
+        <div class="panel-heading">
+          <h2 id="createTitle">데이터 등록</h2>
+          <span>POST /api/items</span>
+        </div>
+
+        <form id="itemForm" class="item-form">
+          <label for="name">이름</label>
+          <input id="name" name="name" type="text" placeholder="예: 신규 항목" required>
+
+          <label for="description">설명</label>
+          <textarea id="description" name="description" rows="5" placeholder="간단한 설명을 입력하세요"></textarea>
+
+          <button type="submit">등록</button>
+        </form>
+      </section>
+
+      <section class="panel list-panel" aria-labelledby="listTitle">
+        <div class="panel-heading">
+          <h2 id="listTitle">데이터 조회</h2>
+          <span>GET /api/items</span>
+        </div>
+
+        <form id="searchForm" class="search-row">
+          <input id="keyword" name="keyword" type="search" placeholder="검색어">
+          <button type="submit">조회</button>
+        </form>
+
+        <pre id="resultBox" class="result-box">API 결과가 여기에 표시됩니다.2</pre>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Server URL: <strong id="serverUrl">http://localhost:3000</strong></span>
+      <span>DB 연결 정보는 .env에서만 관리됩니다.</span>
+    </footer>
+  </div>
+
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

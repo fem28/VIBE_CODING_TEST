@@ -1,0 +1,31 @@
+{
+  "name": "express-mssql-sp-app",
+  "version": "1.0.0",
+  "description": "Express.js 4 + MSSQL stored procedure sample application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "check": "node scripts/healthcheck.js",
+    "verify": "node scripts/verifyServer.js"
+  },
+  "keywords": [
+    "express",
+    "mssql",
+    "stored-procedure"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.18.2",
+    "jquery": "^3.7.1",
+    "mssql": "^12.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "engines": {
+    "node": ">=18.19.0"
+  }
+}
